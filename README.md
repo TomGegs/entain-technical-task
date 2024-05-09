@@ -29,11 +29,24 @@ Zod
 Prettier
 EsLint
 
-## Testing
+## Unit Testing
 
 Vitest
 vitest ui
 
+## Component Testing
+
+Storybook
+
+## E2E testing
+
+Playwright
+
 ## Design Pattern
 
 Single Responsibility Principle
+
+### To Do List
+
+Make it work - make it right - make it fast
+Scaffolding
