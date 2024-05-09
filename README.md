@@ -16,6 +16,14 @@ React Router
 
 TailwindCSS
 
+## API Handling
+
+Axios
+
+## Data Management
+
+React Query
+
 ## State Management
 
 Zustand
@@ -50,3 +58,4 @@ Single Responsibility Principle
 
 Make it work - make it right - make it fast
 Scaffolding
+Get/Fetch API Data
