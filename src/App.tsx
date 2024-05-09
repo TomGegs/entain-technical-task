@@ -1,9 +1,9 @@
-import GoRacingTable from './components/GoRacingTable/GoRacingTable';
+import GoRacingTable from './components/GoRacingDisplay/GoRacingTable';
 
 function App() {
     return (
         <div>
-            <GoRacingTable/>
+            <GoRacingTable />
         </div>
     );
 }
