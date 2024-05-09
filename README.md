@@ -58,4 +58,9 @@ Single Responsibility Principle
 
 Make it work - make it right - make it fast
 Scaffolding
-Get/Fetch API Data
+Fetch API data -
+
+> Q: Is API data real-time or RESTful?
+>
+> > Axios + React Query + Zod to fetch RESTful API
+> > Include socket.io if API requires real-time updates through websocket
