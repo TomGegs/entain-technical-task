@@ -92,7 +92,7 @@ Categories are defined by IDs and are the following.
 ### To Do List: Make it work, make it right, make it fast
 
 Scaffolding
-Fetch API data
+Fetch API data - zod schema > axios > react query >  
 parse/validate/api data
 Real-time update to data
 cycle data 1 minute after race start
