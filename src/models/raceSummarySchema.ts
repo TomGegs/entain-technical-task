@@ -14,20 +14,3 @@ export const raceSummarySchema = z.object({
 
 export type raceSummaryData = z.infer<typeof raceSummarySchema>;
 
-//data
-//data
-//next_to_go_ids (Array)
-//id#: "idString"
-//race_summaries
-//"idString"
-//advertised_start (array)
-//seconds (number)
-//category_id (string)
-//meeting_name (string)
-//race_id (string)
-//race_name (string)
-//race_number (number)
-//venue_country (string)
-//venue_id (string)
-//venue_name (string)
-//venue_state (string)
