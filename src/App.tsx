@@ -3,7 +3,7 @@ import { QueryProvider } from './state/queryClient';
 
 function App() {
     return (
-        <div>
+        <div className="h-svh bg-[#f9f9f9] lg:h-lvh">
             <QueryProvider>
                 <GoRacingTable />
             </QueryProvider>
