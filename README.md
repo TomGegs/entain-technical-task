@@ -19,7 +19,7 @@ TailwindCSS
 ## API Handling
 
 Axios
-Socket.io (Real-time data handling)
+recommended update? -- Socket.io (Real-time data handling)
 
 ## Data Management
 
@@ -94,5 +94,4 @@ Categories are defined by IDs and are the following.
 Scaffolding
 Fetch API data - zod schema > axios > react query >  
 parse/validate/api data
-Real-time update to data
 cycle data 1 minute after race start
