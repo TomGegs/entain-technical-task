@@ -43,18 +43,3 @@ const RaceFilter = () => {
 };
 
 export default RaceFilter;
-
-{
-    /* <ul>
-    {Object.values(data?.race_summaries || {})
-        .filter((race) => race.category_id === selectedRaceCategory)
-        .map((race, index) => (
-            <li key={index}>
-                <h2>{race.race_name}</h2>
-                <p>Meeting Name: {race.meeting_name}</p>
-                <p>Race Number: {race.race_number}</p>
-                <p>Category ID: {race.category_id}</p>
-            </li>
-        ))}
-</ul>; */
-}
