@@ -4,10 +4,10 @@ import { fetchRacesData } from '../api/fetchApi';
 import { useEffect, useState } from 'react';
 import { raceSummaryData } from '../models/raceSummarySchema';
 
-const useRacesData = () => {
+const useRaceData = () => {
     const queryClient = useQueryClient();
     const { data, isLoading, error } = useQuery('races', fetchRacesData, {
-        refetchInterval: 10000, //fetch every 10 seconds
+        refetchInterval: 5000, //fetch every 5 seconds
     });
     const [sortedRaces, setSortedRaces] = useState<raceSummaryData[]>([]);
 
@@ -15,8 +15,8 @@ const useRacesData = () => {
         if (data && data.race_summaries) {
             const now = new Date();
 
+            //Sort in ascending order starting at -60 seconds
             const sorted = Object.values(data.race_summaries)
-                //Sort in ascending order starting at -60 seconds
                 .sort((a, b) => {
                     const diffA = differenceInSeconds(
                         new Date(a.advertised_start.seconds * 1000),
@@ -26,6 +26,12 @@ const useRacesData = () => {
                         new Date(b.advertised_start.seconds * 1000),
                         now
                     );
+
+                    //Sort in ascending order by race_id if advertised race time is the same
+                    if (diffA === diffB) {
+                        return parseInt(a.race_id) - parseInt(b.race_id);
+                    }
+
                     return diffA - diffB;
                 })
                 //filter out races that have passed negative 60 seconds
@@ -44,4 +50,4 @@ const useRacesData = () => {
     return { sortedRaces, isLoading, error };
 };
 
-export default useRacesData;
+export default useRaceData;
