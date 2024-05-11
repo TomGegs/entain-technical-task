@@ -18,38 +18,48 @@ const RaceCard = ({
     raceIndex,
 }: RaceCardProps) => {
     const raceIcon = getRaceIcon(raceCategory);
-    const raceStart = useRaceCountdown(raceCountdown);
+    const { countdown, isVisible, raceStartingSoonText } =
+        useRaceCountdown(raceCountdown);
+
     return (
-        <div className="flex w-full flex-col">
-            <div
-                key={raceIndex}
-                className="flex h-full w-full flex-row items-center justify-between bg-white px-2 pb-2 text-sm font-bold shadow-sm"
-            >
-                {/* leftside */}
-                <div className="flex h-full flex-col">
-                    {/* icon */}
-                    <img
-                        src={raceIcon}
-                        className="h-10 w-10"
-                        alt="Race Type Icon"
-                    />
-                    {/* race meeting/location and summary ID#*/}
-                    <div className="flex flex-row gap-1 uppercase">
-                        <div>{raceMeeting}</div>
-                        <div>R{raceNumber}</div>
+        <>
+            {isVisible ? (
+                <div className="flex w-full flex-col">
+                    <div
+                        key={raceIndex}
+                        className="flex h-full w-full flex-row items-center justify-between bg-white px-2 pb-2 text-sm font-bold shadow-sm"
+                    >
+                        {/* Left-side of container */}
+                        <div className="flex h-full flex-col">
+                            {/* Racing Category Icon */}
+                            <img
+                                src={raceIcon}
+                                className="h-10 w-10"
+                                alt="Race Type Icon"
+                            />
+                            {/* Race meeting/location and Race ID#*/}
+                            <div className="flex flex-row gap-1 uppercase">
+                                <div className="max-w-28 truncate">
+                                    {raceMeeting}
+                                </div>
+                                <div>R{raceNumber}</div>
+                            </div>
+                        </div>
+                        {/* Right-side of container */}
+                        <div className="flex h-full flex-col">
+                            {/* Countdown */}
+                            <div
+                                className={`flex h-full items-center ${raceStartingSoonText}`}
+                            >
+                                {countdown}
+                            </div>
+                            {/* channel would be here if API supported  */}
+                        </div>
                     </div>
+                    <GoRacingColumn />
                 </div>
-                {/* rightside */}
-                <div className="flex h-full flex-col">
-                    {/* Countdown */}
-                    <div className="h-10 place-content-center text-red-900">
-                        {raceStart}
-                    </div>
-                    {/* channel - if API supported  */}
-                </div>
-            </div>
-            <GoRacingColumn />
-        </div>
+            ) : null}
+        </>
     );
 };
 
