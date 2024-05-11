@@ -1,9 +1,9 @@
 import CheckboxIcon from '../../../../assets/images/CheckboxIcon.svg';
 import useRaceCategoryStore from '../../../../state/useRaceCategoryStore';
-import useRacesData from '../../../../hooks/useRaceData';
+import useRaceData from '../../../../hooks/useRaceData';
 
 const RaceFilter = () => {
-    const { error, isLoading } = useRacesData();
+    const { error, isLoading } = useRaceData();
     const { raceCategories, selectedRaceCategories, toggleRaceCategory } =
         useRaceCategoryStore();
 
