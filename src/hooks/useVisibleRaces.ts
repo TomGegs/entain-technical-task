@@ -14,11 +14,13 @@ const useVisibleRaces = (sortedRaces: raceSummaryData[]) => {
                     now
                 ) > -60
         );
-        setVisibleRaces(
-            visible.length >= 5
-                ? visible.slice(0, 5)
-                : visible.concat(sortedRaces.slice(visible.length, 5))
-        );
+        setVisibleRaces(visible.slice(0, 5));
+        if (visible.length < 5) {
+            setVisibleRaces((oldVisible) => [
+                ...oldVisible,
+                ...Array(5 - oldVisible.length).fill(null),
+            ]);
+        }
     }, [sortedRaces]);
 
     return visibleRaces;

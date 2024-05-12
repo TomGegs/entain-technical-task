@@ -1,4 +1,4 @@
-import GoRacingTable from './components/GoRacingDisplay/GoRacingTable';
+import GoRacingTable from './components/GoRacingTable';
 import { QueryProvider } from './state/queryClient';
 
 function App() {

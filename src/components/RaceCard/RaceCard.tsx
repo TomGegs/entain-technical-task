@@ -1,6 +1,6 @@
-import useRaceCountdown from '../../../hooks/useRaceCountdown';
-import getRaceIcon from '../../../utils/getRaceIcon';
-import GoRacingColumn from '../GoRacingColumn';
+import useRaceCountdown from '../../hooks/useRaceCountdown';
+import getRaceIcon from '../../utils/getRaceIcon';
+import GoRacingColumn from '../RaceColumn/GoRacingColumn';
 
 type RaceCardProps = {
     raceCategory: string;

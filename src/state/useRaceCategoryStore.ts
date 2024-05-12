@@ -15,6 +15,7 @@ interface RaceCategoryState {
 }
 
 const useRaceCategoryStore = create<RaceCategoryState>((set) => ({
+    //
     raceCategories: [
         {
             categoryId: '9daef0d7-bf3c-4f50-921d-8e818c60fe61',

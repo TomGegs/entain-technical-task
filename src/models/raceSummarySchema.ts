@@ -1,6 +1,5 @@
 import { z } from 'zod';
 
-
 export const raceSummarySchema = z.object({
     advertised_start: z.object({
         seconds: z.number(),
@@ -13,4 +12,3 @@ export const raceSummarySchema = z.object({
 });
 
 export type raceSummaryData = z.infer<typeof raceSummarySchema>;
-

@@ -1,4 +1,4 @@
-import RaceFilter from './RaceFilter/RaceFilter';
+import RaceFilter from './RaceFilter';
 
 const TableHeader = () => {
     return (

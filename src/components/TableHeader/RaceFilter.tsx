@@ -1,6 +1,6 @@
 import CheckboxIcon from '../../../../assets/images/CheckboxIcon.svg';
-import useRaceCategoryStore from '../../../../state/useRaceCategoryStore';
-import useRaceData from '../../../../hooks/useRaceData';
+import useRaceCategoryStore from '../../state/useRaceCategoryStore';
+import useRaceData from '../../hooks/useRaceData';
 
 const RaceFilter = () => {
     const { error, isLoading } = useRaceData();

@@ -1,8 +1,8 @@
 import RaceCard from './RaceCard/RaceCard';
 import TableHeader from './TableHeader/TableHeader';
-import useRaceData from '../../hooks/useRaceData';
-import useRaceCategoryStore from '../../state/useRaceCategoryStore';
-import useVisibleRaces from '../../hooks/useVisibleRaces';
+import useRaceData from '../hooks/useRaceData';
+import useRaceCategoryStore from '../state/useRaceCategoryStore';
+import useVisibleRaces from '../hooks/useVisibleRaces';
 
 const GoRacingTable = () => {
     const { sortedRaces } = useRaceData();
