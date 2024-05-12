@@ -1,51 +1,32 @@
-import { differenceInSeconds } from 'date-fns';
-import { useQuery, useQueryClient } from 'react-query';
-import { fetchRacesData } from '../api/fetchApi';
+// Simplifies useRaceData to focus only on fetching and sorting by time and ID.
 import { useEffect, useState } from 'react';
+import { differenceInSeconds } from 'date-fns';
+import { useQuery } from 'react-query';
+import { fetchRacesData } from '../api/fetchApi';
 import { raceSummaryData } from '../models/raceSummarySchema';
 
 const useRaceData = () => {
-    const queryClient = useQueryClient();
     const { data, isLoading, error } = useQuery('races', fetchRacesData, {
-        refetchInterval: 5000, //fetch every 5 seconds
+        refetchInterval: 5000, // Refetch every 5 seconds
     });
     const [sortedRaces, setSortedRaces] = useState<raceSummaryData[]>([]);
 
     useEffect(() => {
         if (data && data.race_summaries) {
             const now = new Date();
-
-            //Sort in ascending order starting at -60 seconds
-            const sorted = Object.values(data.race_summaries)
-                .sort((a, b) => {
-                    const diffA = differenceInSeconds(
-                        new Date(a.advertised_start.seconds * 1000),
-                        now
-                    );
-                    const diffB = differenceInSeconds(
-                        new Date(b.advertised_start.seconds * 1000),
-                        now
-                    );
-
-                    //Sort in ascending order by race_id if advertised race time is the same
-                    if (diffA === diffB) {
-                        return parseInt(a.race_id) - parseInt(b.race_id);
-                    }
-
-                    return diffA - diffB;
-                })
-                //filter out races that have passed negative 60 seconds
-                .filter((race) => {
-                    const raceTime = new Date(
-                        race.advertised_start.seconds * 1000
-                    );
-                    const timeDiff = differenceInSeconds(raceTime, now);
-                    return timeDiff > -60;
-                });
-
+            const sorted = Object.values(data.race_summaries).sort((a, b) => {
+                const timeA = new Date(a.advertised_start.seconds * 1000);
+                const timeB = new Date(b.advertised_start.seconds * 1000);
+                const timeDiff =
+                    differenceInSeconds(timeA, now) -
+                    differenceInSeconds(timeB, now);
+                return timeDiff === 0
+                    ? a.race_id.localeCompare(b.race_id)
+                    : timeDiff;
+            });
             setSortedRaces(sorted);
         }
-    }, [data, queryClient]);
+    }, [data]);
 
     return { sortedRaces, isLoading, error };
 };

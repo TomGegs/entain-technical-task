@@ -2,10 +2,13 @@ import RaceCard from './RaceCard/RaceCard';
 import TableHeader from './TableHeader/TableHeader';
 import useRaceData from '../../hooks/useRaceData';
 import useRaceCategoryStore from '../../state/useRaceCategoryStore';
+import useVisibleRaces from '../../hooks/useVisibleRaces';
 
 const GoRacingTable = () => {
     const { sortedRaces } = useRaceData();
     const { selectedRaceCategories } = useRaceCategoryStore();
+    //  make sure 5 races are onscreen at all times
+    const visibleRaces = useVisibleRaces(sortedRaces);
     // if (isLoading) return <div>Loading...</div>;
     // if (error) return <div>Error loading races: {error}</div>;
 
@@ -13,7 +16,7 @@ const GoRacingTable = () => {
         <div className="w-full p-4 lg:w-full">
             <TableHeader />
             <div className="flex w-full flex-row gap-1 pt-4">
-                {sortedRaces
+                {visibleRaces
                     .filter((race) =>
                         selectedRaceCategories.includes(race.category_id)
                     )

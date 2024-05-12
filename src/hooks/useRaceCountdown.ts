@@ -3,48 +3,35 @@ import { differenceInSeconds } from 'date-fns';
 
 const useRaceCountdown = (raceStartTime: number) => {
     const [countdown, setCountdown] = useState('');
-    const [isVisible, setIsVisible] = useState(true);
-    const [raceStartingSoonText, setRaceStartingSoonText] =
-        useState('text-red-900');
+    const [textColour, setTextColour] = useState('text-[#636262]');
 
     useEffect(() => {
         const interval = setInterval(() => {
             const now = new Date();
-            const raceTime = new Date(raceStartTime * 1000); // seconds to milliseconds
+            const raceTime = new Date(raceStartTime * 1000); // Convert to milliseconds
             const difference = differenceInSeconds(raceTime, now);
-
-            // Race not displayed after -60 seconds
-            if (difference < -60) {
-                setIsVisible(false);
-                clearInterval(interval);
-                return;
-            }
-
             const minutes = Math.floor(Math.abs(difference) / 60);
             const seconds = Math.abs(difference) % 60;
 
-            // Change text color to red when the countdown is less than 5 minutes
-            if (minutes < 5 || (minutes === 5 && seconds === 0)) {
-                setRaceStartingSoonText('text-red-900');
+            // Set text colour to red if less than 5 minutes remaining
+            if (minutes <= 5) {
+                setTextColour('text-red-500');
             } else {
-                setRaceStartingSoonText('text-[#636262]');
+                setTextColour('text-[#636262]');
             }
 
-            // Countdown display
-            //negative sign if the race's start time passes the advertised start time
+            // Format countdown for negative time, removing minutes if under 1 minute and seconds if over 5 minutes
             const sign = difference < 0 ? '-' : '';
-            // Minutes only show in countdown if they are greater than 0
-            const formattedMinutes = minutes > 0 ? `${minutes}m` : '';
-            // Seconds only show in countdown if minutes are less than 5
+            const formattedMinutes = minutes > 0 ? `${minutes}m ` : '';
             const formattedSeconds = minutes > 5 ? '' : `${seconds}s`;
 
-            setCountdown(`${sign}${formattedMinutes} ${formattedSeconds}`);
+            setCountdown(`${sign}${formattedMinutes}${formattedSeconds}`);
         }, 1000);
 
         return () => clearInterval(interval);
-    }, [raceStartTime, isVisible]);
+    }, [raceStartTime]);
 
-    return { countdown, isVisible, raceStartingSoonText };
+    return { countdown, textColour };
 };
 
 export default useRaceCountdown;
