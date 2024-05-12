@@ -18,10 +18,10 @@ const RaceCard = ({
     raceIndex,
 }: RaceCardProps) => {
     const raceIcon = getRaceIcon(raceCategory);
-    const { countdown, raceStartingSoonText } = useRaceCountdown(raceCountdown);
+    const { countdown, textColour } = useRaceCountdown(raceCountdown);
 
     return (
-        <div className="flex w-full flex-col">
+        <div className="flex w-[20%] flex-col">
             <div
                 key={raceIndex}
                 className="flex h-full w-full flex-row items-center justify-between bg-white px-2 pb-2 text-sm font-bold shadow-sm"
@@ -43,9 +43,7 @@ const RaceCard = ({
                 {/* Right-side of container */}
                 <div className="flex h-full flex-col">
                     {/* Countdown */}
-                    <div
-                        className={`flex h-full items-center ${raceStartingSoonText}`}
-                    >
+                    <div className={`flex h-full items-center ${textColour}`}>
                         {countdown}
                     </div>
                     {/* channel would be here if API supported  */}
