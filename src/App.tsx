@@ -7,7 +7,7 @@ function App() {
     return (
         <div className=" h-svh justify-evenly flex flex-row bg-[#f9f9f9] lg:h-lvh">
             <SidebarMenu />
-            <div className='w-[80%]'>
+            <div className='w-full lg:w-[80%]'>
                 <HeroBanner />
                 <QueryProvider>
                     <GoRacingTable />

@@ -14,6 +14,7 @@ import {
 
 export function SidebarMenu() {
     const [selectedIndex, setSelectedIndex] = useState<number | null>(0);
+    // Sidebar menu items have no functionality in this example
     const menuItems = [
         {
             icon: <Home className="h-4 w-4" />,
@@ -54,7 +55,7 @@ export function SidebarMenu() {
         },
     ];
     return (
-        <div className="flex h-full w-[20%] flex-col items-start pr-2 text-sm font-medium ">
+        <div className="hidden h-full w-[20%] flex-col items-start pr-2 text-sm font-medium lg:flex ">
             <div className="flex h-52 w-full items-center justify-center bg-[#ff7800]">
                 <img src={nedsLogo} alt="Neds Logo" className="h-10" />
             </div>
@@ -64,7 +65,7 @@ export function SidebarMenu() {
                     <a
                         href="#"
                         onClick={() => setSelectedIndex(index)}
-                        className={`flex items-center gap-3 border px-3 py-5 uppercase text-white shadow-sm transition-all  active:bg-[#ff6000] active:text-white ${selectedIndex === index ? 'bg-[#ff6000] text-white' : 'bg-grey-300 text-black hover:bg-gray-200 hover:text-black'}`}
+                        className={`flex items-center gap-3 border px-3 py-5 uppercase shadow-sm transition-all active:bg-[#ff6000] active:text-white ${selectedIndex === index ? 'bg-[#ff6000] text-white' : 'bg-grey-300 text-black hover:bg-gray-200 hover:text-black'}`}
                     >
                         {item.icon}
                         {item.title}
