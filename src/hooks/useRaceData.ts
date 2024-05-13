@@ -5,7 +5,7 @@ import { fetchRacesData } from '../api/fetchApi';
 
 const useRaceData = () => {
     const { data, isLoading, error } = useQuery('races', fetchRacesData, {
-        refetchInterval: 5000, // Refetch every 5 seconds
+        refetchInterval: 10000, // Refetch every 10 seconds
     });
 
     const now = useMemo(() => new Date(), []);
