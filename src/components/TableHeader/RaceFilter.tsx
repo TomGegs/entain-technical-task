@@ -34,7 +34,7 @@ const RaceFilter = () => {
                                     : option.iconNotSelected
                             }
                             alt={`${option.name} icon`}
-                            className="ml-1 h-5 w-5"
+                            className="ml-1 h-5 w-5 cursor-pointer"
                         />
                     </div>
                 </label>

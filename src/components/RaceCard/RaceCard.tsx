@@ -1,7 +1,7 @@
 import useRaceCountdown from '../../hooks/useRaceCountdown';
 import useRaceData from '../../hooks/useRaceData';
 import getRaceIcon from '../../utils/getRaceIcon';
-import GoRacingColumn from '../RaceColumn/GoRacingColumn';
+import RaceColumn from '../RaceColumn/RaceColumn';
 import loadingIcon from '../../assets/images/LoadingIcon.svg';
 
 type RaceCardProps = {
@@ -64,7 +64,7 @@ const RaceCard = ({
                     {/* channel would be here if API supported  */}
                 </div>
             </div>
-            <GoRacingColumn />
+            <RaceColumn />
         </div>
     );
 };

@@ -4,7 +4,7 @@ interface QueryProviderProps {
     children: React.ReactNode;
 }
 
-// Wrap the application with QueryClientProvider
+// Purpose: the application with QueryClientProvider
 
 export function QueryProvider({ children }: QueryProviderProps) {
     const queryClient = new QueryClient();

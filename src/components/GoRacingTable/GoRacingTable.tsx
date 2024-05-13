@@ -1,9 +1,9 @@
-import RaceCard from './RaceCard/RaceCard';
-import TableHeader from './TableHeader/TableHeader';
-import useRaceData from '../hooks/useRaceData';
-import useRaceCategoryStore from '../state/useRaceCategoryStore';
-import useVisibleRaces from '../hooks/useVisibleRaces';
-import NoRaceMessageCard from './RaceCard/NoRaceMessageCard';
+import RaceCard from '../RaceCard/RaceCard';
+import TableHeader from '../TableHeader/TableHeader';
+import useRaceData from '../../hooks/useRaceData';
+import useRaceCategoryStore from '../../state/useRaceCategoryStore';
+import useVisibleRaces from '../../hooks/useVisibleRaces';
+import NoRaceMessageCard from '../RaceCard/NoRaceMessageCard';
 
 const GoRacingTable = () => {
     const { sortedRaces } = useRaceData();

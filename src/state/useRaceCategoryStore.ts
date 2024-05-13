@@ -6,6 +6,8 @@ import HorseIconNotSelected from '../assets/images/HorseRacingNoSelect.svg';
 import HarnessIconNotSelected from '../assets/images/HarnessRacingNoSelect.svg';
 import GreyhoundIconNotSelected from '../assets/images/GreyhoundRacingNoSelect.svg';
 
+// Purpose: Manages the state of race categories and their selection status for the filter.
+
 interface RaceCategory {
     categoryId: string;
     name: string;
@@ -13,7 +15,8 @@ interface RaceCategory {
     iconNotSelected: string;
 }
 
-interface RaceCategoryState {
+export interface RaceCategoryState {
+    default(): unknown;
     raceCategories: RaceCategory[];
     selectedRaceCategories: string[];
     toggleRaceCategory: (categoryId: string) => void;

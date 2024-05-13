@@ -13,7 +13,7 @@ const useRaceCountdown = (raceStartTime: number) => {
             const minutes = Math.floor(Math.abs(difference) / 60);
             const seconds = Math.abs(difference) % 60;
 
-            // Set text colour to red if less than 5 minutes remaining
+            // Set text color to red if less than 5 minutes remaining
             if (minutes <= 5) {
                 setTextColour('text-red-500');
             } else {

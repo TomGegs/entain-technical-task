@@ -2,6 +2,8 @@ import GreyhoundRacingIcon from '../assets/images/GreyhoundRacing.svg';
 import HarnessRacingIcon from '../assets/images/HarnessRacing.svg';
 import HorseRacingIcon from '../assets/images/HorseRacing.svg';
 
+// Purpose: This function is designed to map race category IDs to their respective icon paths.
+
 const getRaceIcon = (raceCategory: string | undefined) => {
     switch (raceCategory) {
         case '9daef0d7-bf3c-4f50-921d-8e818c60fe61':
