@@ -14,7 +14,7 @@ const useVisibleRaces = (sortedRaces: raceSummaryData[]) => {
                     now
                 ) > -60
         );
-        setVisibleRaces(visible.slice(0, 5));
+        setVisibleRaces(visible);
         if (visible.length < 5) {
             setVisibleRaces((oldVisible) => [
                 ...oldVisible,
