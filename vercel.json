@@ -1,7 +1,7 @@
 {
     "headers": [
         {
-            "source": "/api/(.*)",
+            "source": "/api/:path*",
             "destination": "https://api.neds.com.au/rest/v1/racing/:path*",
             "headers": [
                 { "key": "Access-Control-Allow-Credentials", "value": "true" },
