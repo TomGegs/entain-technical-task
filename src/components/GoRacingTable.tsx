@@ -10,12 +10,11 @@ const GoRacingTable = () => {
     const { selectedRaceCategories } = useRaceCategoryStore();
     //  make sure 5 races are onscreen at all times
     const visibleRaces = useVisibleRaces(sortedRaces);
-    // if (error) return <div>Error loading races: {error}</div>;
 
     return (
         <div className="w-full p-4 lg:w-full">
             <TableHeader />
-            <div className="flex w-full flex-col lg:flex-row gap-1 pt-4">
+            <div className="flex w-full flex-col gap-1 pt-4 lg:flex-row">
                 {selectedRaceCategories.length > 0 ? (
                     visibleRaces
                         .filter(

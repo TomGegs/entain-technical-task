@@ -40,7 +40,7 @@ const GoRacingColumn = () => {
     ];
 
     return (
-        <div className="mt-1 h-full w-full bg-white p-2 shadow-sm">
+        <div className="hidden lg:flex lg:flex-col mt-1 h-full w-full bg-white p-2 shadow-sm">
             {/* title */}
             <div className="text-sm font-semibold uppercase text-gray-500 ">
                 No. / Runner
