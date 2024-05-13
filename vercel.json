@@ -1,14 +1,15 @@
 {
-    "version": 2,
-    "routes": [
-        { "handle": "filesystem" },
-        { "src": "/.*", "dest": "/index.html" }
+    "rewrites": [
+        {
+            "source": "/api/:path*",
+            "destination": "https://api.neds.com.au/rest/v1/racing/:path*"
+        }
     ],
     "headers": [
         {
-            "source": "https://api.neds.com.au/rest/v1/racing/",
+            "source": "/api/:path*",
             "headers": [
-                { "key": "Access-Control-Allow-Credentials", "value": "true" },
+                { "key": "X-From", "value": "Vercel" },
                 { "key": "Access-Control-Allow-Origin", "value": "*" },
                 {
                     "key": "Access-Control-Allow-Methods",

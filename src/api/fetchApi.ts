@@ -1,10 +1,10 @@
 import axios from 'axios';
 import { apiResponseSchema } from '../models/apiResponseSchema';
 
-//Manage API calls
+// Manage API calls
 
 const axiosApiInstance = axios.create({
-    baseURL: 'https://api.neds.com.au/rest/v1/racing/',
+    baseURL: '/api/', // local proxy endpoint
     headers: { 'Content-Type': 'application/json' },
 });
 
