@@ -6,7 +6,7 @@ const RaceFilter = () => {
         useRaceCategoryStore();
 
     return (
-        <div className="flex w-full flex-row items-center justify-between px-2  py-2 lg:w-52 lg:flex-row lg:py-0">
+        <div className="flex w-full flex-row items-center gap-6 lg:justify-between pl-2 pr-4 py-2 lg:w-52 lg:flex-row lg:py-0">
             {raceCategories.map((option, index) => (
                 <label key={index}>
                     <div className="relative flex w-full select-none items-center">
