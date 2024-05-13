@@ -4,7 +4,7 @@ import { apiResponseSchema } from '../models/apiResponseSchema';
 //Manage API calls
 
 const axiosApiInstance = axios.create({
-    baseURL: 'https://api.neds.com.au/rest/v1/racing/',
+    baseURL: import.meta.env.VITE_API_URL as string,
     headers: { 'Content-Type': 'application/json' },
 });
 
