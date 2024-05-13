@@ -1,5 +1,5 @@
 {
-    "headers": [
+    "rewrites": [
         {
             "source": "/api/:path*",
             "destination": "https://api.neds.com.au/rest/v1/racing/:path*",
