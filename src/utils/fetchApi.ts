@@ -4,15 +4,13 @@ import { apiResponseSchema } from '../models/apiResponseSchema';
 // Manage API calls
 
 const axiosApiInstance = axios.create({
-    baseURL: 'https://api.neds.com.au/rest/v1/racing/', // local proxy endpoint
+    baseURL: 'api/proxy', // local proxy endpoint
     headers: { 'Content-Type': 'application/json' },
 });
 
 export const fetchRacesData = async () => {
     try {
-        const response = await axiosApiInstance.get(
-            '?method=nextraces&count=10'
-        );
+        const response = await axiosApiInstance.get('/'); // query param handled by proxy
         console.log(response);
         if (response.data && response.data.data) {
             return apiResponseSchema.parse(response.data.data);

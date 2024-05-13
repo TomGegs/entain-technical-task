@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import { differenceInSeconds } from 'date-fns';
 import { useQuery } from 'react-query';
-import { fetchRacesData } from '../api/fetchApi';
+import { fetchRacesData } from '../utils/fetchApi';
 
 const useRaceData = () => {
     const { data, isLoading, error } = useQuery('races', fetchRacesData, {
