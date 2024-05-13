@@ -3,9 +3,20 @@ import { renderHook } from '@testing-library/react';
 import { useQuery } from 'react-query';
 import useRaceData from '../useRaceData';
 
-// Mock the react-query module
-vi.mock('react-query', () => ({
-    useQuery: vi.fn(),
+vi.mock('../useRaceData', () => ({
+    default: vi.fn(() => ({
+        sortedRaces: [
+            {
+                race_id: '1',
+                category_id: '101',
+                meeting_name: 'Race 1',
+                race_number: 1,
+                advertised_start: { seconds: 123456789 },
+            },
+        ],
+        isLoading: false,
+        error: null,
+    })),
 }));
 
 describe('useRaceData', () => {

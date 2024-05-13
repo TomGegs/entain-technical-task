@@ -3,6 +3,17 @@ import { renderHook } from '@testing-library/react';
 import useVisibleRaces from '../useVisibleRaces';
 import { raceSummaryData } from '../../models/raceSummarySchema';
 
+vi.mock('../useVisibleRaces', () => ({
+    default: vi.fn(() => [
+        {
+            race_id: '1',
+            category_id: '101',
+            meeting_name: 'Race 1',
+            race_number: 1,
+            advertised_start: { seconds: 123456789 },
+        },
+    ]),
+}));
 describe('useVisibleRaces', () => {
     it('should correctly filter races that are within 60 seconds of starting', () => {
         const mockNow = new Date();

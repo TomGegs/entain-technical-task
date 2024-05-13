@@ -16,7 +16,6 @@ interface RaceCategory {
 }
 
 export interface RaceCategoryState {
-    default(): unknown;
     raceCategories: RaceCategory[];
     selectedRaceCategories: string[];
     toggleRaceCategory: (categoryId: string) => void;
