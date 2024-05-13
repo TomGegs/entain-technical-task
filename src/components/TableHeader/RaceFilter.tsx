@@ -1,17 +1,12 @@
-import CheckboxIcon from '../../../../assets/images/CheckboxIcon.svg';
+import CheckboxIcon from '../../assets/images/CheckboxIcon.svg';
 import useRaceCategoryStore from '../../state/useRaceCategoryStore';
-import useRaceData from '../../hooks/useRaceData';
 
 const RaceFilter = () => {
-    const { error, isLoading } = useRaceData();
     const { raceCategories, selectedRaceCategories, toggleRaceCategory } =
         useRaceCategoryStore();
 
-    if (isLoading) return <div>Loading...</div>;
-    if (error) return <div>Error loading races.</div>;
-
     return (
-        <div className="flex w-52 flex-row items-center justify-between px-2">
+        <div className="flex w-full flex-row items-center justify-between px-2  py-2 lg:w-52 lg:flex-row lg:py-0">
             {raceCategories.map((option, index) => (
                 <label key={index}>
                     <div className="relative flex w-full select-none items-center">
@@ -31,7 +26,13 @@ const RaceFilter = () => {
                             className="absolute bottom-0 left-0 h-3.5 w-3.5 cursor-pointer  rounded opacity-0 peer-checked:opacity-100"
                         />
                         <img
-                            src={option.icon}
+                            src={
+                                selectedRaceCategories.includes(
+                                    option.categoryId
+                                )
+                                    ? option.icon
+                                    : option.iconNotSelected
+                            }
                             alt={`${option.name} icon`}
                             className="ml-1 h-5 w-5"
                         />
