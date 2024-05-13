@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import axios from 'axios';
 
-export default async (req: any, res: any) => {
+export default async (res: any) => {
     try {
         const apiUrl = 'https://api.neds.com.au/rest/v1/racing/';
         const params = new URLSearchParams({
