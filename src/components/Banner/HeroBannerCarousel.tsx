@@ -1,6 +1,6 @@
 import Autoplay from 'embla-carousel-autoplay';
 
-import { Carousel, CarouselContent, CarouselItem } from '../Common/UI/Carousel';
+import { Carousel, CarouselContent, CarouselItem } from '../Common/UI/CarouselCommon';
 
 import homePage1 from '../../assets/images/homepage/HOM.jpg';
 import homePage2 from '../../assets/images/homepage/HOM2.jpg';
