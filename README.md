@@ -1,97 +1,90 @@
-# Entain Technical Setup
+# Entain Technical Project
 
-Overview of the packages and decisions made in this project
+## **Introduction**
 
-## Build
+This Single Page Application (SPA) displays the "Next To Go Racing" table, mimicking the Neds.com.au website. The focus was on user experience, clarity of code, and simplicity in structure.
 
-Vite
-React
-TypeScript
+## **Task Requirements**
 
-## Routing
+- Create an SPA that displays 'Next to Go’ races using the Neds API.
+- Always display 5 races.
+- Sort races by time in ascending order.
+- Races should disappear from the list one minute past their start time (`advertised_start`).
+- Display meeting name (`meeting_name`), race number (`race_number`), and a countdown timer to the start of the race.
+- Users should be able to toggle race categories to view races only from selected categories.
 
-React Router
+## **Objective**
 
-## Styling
+Successfully deploy a dynamic mockup of the Next To Go Racing Table, mirroring the user experience on the Ned's website homepage.
 
-TailwindCSS
+## **Features**
 
-## API Handling
+- **API Integration**: Fetches data every 10 seconds for up-to-date race information.
+- **CORS Handling**: Uses an API proxy to avoid CORS errors when hosting on Vercel.
+- **Data Validation**: Utilises Zod schemas to validate incoming API data.
+- **State Management**: Employs React Query for managing the global state of the race table category selection.
+- **Dynamic Updates**: Information on 5 races is displayed continuously with updates for races that have started or been removed from the API.
+- **Sorting and Filtering**: Sort races by advertised start time or race number when times coincide. Filter races by category with interactive icons.
+- **UI Enhancements**: Includes an infinite loop hero carousel, a responsive sidebar with Ned's branding, and mobile-specific navigational elements.
+- **Countdown Timer**: Implements a race countdown timer with different displays for time remaining to increase urgency as the race start approaches.
 
-Axios
-recommended update? -- Socket.io (Real-time data handling)
+## **Technology / Tools**
 
-## Data Management
+- **Design Pattern**: Single Responsibility Principle
+- **Build Tools**: Vite, React, TypeScript
+- **Styling**: TailwindCSS
+- **Component Libraries**: Shadcn UI, Embla Carousel
+- **Routing**: React Router
+- **API Handling**: Axios
+- **Data Management**: React Query
+- **State Management**: Zustand
+- **Schema/Validation**: Zod
+- **Date/Time Handling**: Date-Fns
+- **Standards and Linting**: Prettier, ESLint
 
-React Query
+## **Installation**
 
-## State Management
+Follow these steps to get your development environment set up:
 
-Zustand
+1. **Clone the repository**
 
-## Schema, parsing, validation
+Open your terminal and clone the project repository using Git:
+git clone <https://github.com/yourusername/Entain.git>
+cd Entain
 
-Zod
+2. **Install dependencies**
 
-## Date/Time handling
+npm install
 
-Date Fns
+3. **Start the development server**
+npm run dev
 
-## Linting / Coding Standards
+The application should now be running on <http://localhost:5173/>. Open this URL in your web browser to view the app.
 
-Prettier
-EsLint
 
-## Unit Testing
+## **Developer vs Deployment Enviroments**
 
-Vitest
-vitest ui
+This application is optimised for deployment on Vercel, leveraging an API proxy to address CORS issues when fetching data from the Neds API.
 
-## Component Testing
+To successfully run the application in the development environment, specific changes are required:
 
-Storybook
+- **Development Settings**:
+  - Uncomment the line `baseURL: 'https://api.neds.com.au/rest/v1/racing',` in `src/utils/fetchApi.ts`.
+  - Uncomment the line `const response = await axiosApiInstance.get('/?method=nextraces&count=10');` in the same file.
+  - Comment out the line `baseURL: 'api/proxy',` and the line `const response = await axiosApiInstance.get('/');` in `src/utils/fetchApi.ts`.
 
-## E2E testing
+Before deploying to production, ensure to revert these changes:
+- **Deployment Settings**:
+  - Comment the lines for direct API access (`baseURL: 'https://api.neds.com.au/rest/v1/racing',` and the respective axios get method).
+  - Uncomment the lines for using the API proxy (`baseURL: 'api/proxy',` and its axios get method) to mitigate CORS errors.
 
-Playwright
+This toggle between configurations ensures that the application functions correctly in both local development and when deployed on Vercel.
 
-## Design Pattern
+## **Recommendations / Future Improvements**
 
-Single Responsibility Principle
-
-## Requirements
-
-### Design
-
-> SPA
-> Design the 'Next to go' races section
-> Tabular format
-
-### API Management
-
-> Display greyhound. harness and horse racing
-> 5 races per sport
-> Races sorted in ascending order
-> Race will disappear from the list from 1 minute after the start time of their race (advertised_start)
-> meeting_name, race_number and a countdown timer must be rendered
-> countdown timer indicates time until start of race
-
-### User Functions
-
-> Toggle race categories
-
-### API information
-
-Categories are defined by IDs and are the following.
-
-> Greyhound racing: ​category_id: '9daef0d7-bf3c-4f50-921d-8e818c60fe61'
-> Harness racing: ​category_id: '161d9be2-e909-4326-8c2c-35ed71fb460b'
-> Horse racing: ​category_id: '4a2788f8-e825-4d36-9894-efd4baf1cfa
-> GET https://api.neds.com.au/rest/v1/racing/?method=nextraces&count=10
-
-### To Do List: Make it work, make it right, make it fast
-
-Scaffolding
-Fetch API data - zod schema > axios > react query >  
-parse/validate/api data
-cycle data 1 minute after race start
+- Include real-time data per race and detailed information accessible via a draw panel.
+- Introduce a 'quick bet' button available when the countdown is below 1 minute.
+- Develop a panel to view recent races that have concluded.
+- Unit testing coverage for each component using Vitest.
+- Standardise design elements across the platform.
+- Create a mobile-specific interface designed for touch interactions, potentially using carousels for displaying race -information.
