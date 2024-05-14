@@ -7,7 +7,7 @@ import homePage2 from '../../assets/images/homepage/HOM2.jpg';
 import homePage3 from '../../assets/images/homepage/HOM3.jpg';
 import homePage4 from '../../assets/images/homepage/HOM4.jpg';
 
-export function HeroBanner() {
+const HeroBanner = () => {
     const images = [homePage1, homePage2, homePage3, homePage4];
     return (
         <Carousel
@@ -31,4 +31,6 @@ export function HeroBanner() {
             </CarouselContent>
         </Carousel>
     );
-}
+};
+
+export default HeroBanner;

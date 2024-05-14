@@ -1,5 +1,5 @@
 import GoRacingTable from './components/GoRacingTable/GoRacingTable';
-import { HeroBanner } from './components/banner/HeroBanner';
+import HeroBanner from './components/banner/HeroBanner';
 import { FooterNavigation } from './components/navigation/mobileNavigation/FooterNavigation';
 import { HeaderNavigation } from './components/navigation/mobileNavigation/HeaderNavigation';
 import { SidebarMenu } from './components/navigation/sidebar/SidebarMenu';
