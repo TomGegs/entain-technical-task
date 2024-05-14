@@ -3,20 +3,20 @@ import nedsLogo from '../../../assets/images/homepage/neds-logo.svg';
 
 export function MobileHeaderNav() {
     return (
-        <div className="from-nedsOrange flex h-10 w-full flex-row items-center justify-between bg-gradient-to-r to-[#fc5504] text-sm font-medium lg:hidden">
+        <div className="flex h-32 w-full flex-row items-center justify-between bg-gradient-to-r from-nedsOrange to-[#fc5504] text-3xl font-medium lg:hidden">
             <img
                 loading="lazy"
                 src={nedsLogo}
                 alt="Neds Logo"
-                className="m-3 h-4"
+                className="m-6 h-10"
             />
-            <div className="grid h-full  grid-cols-4 flex-row items-center justify-items-center gap-4 px-2 text-white">
-                <Search className="col-span-1 h-5 w-5" />
+            <div className="grid h-full grid-cols-4 flex-row items-center justify-items-center gap-8 px-4 text-white">
+                <Search className="col-span-1 h-10 w-10" />
                 <div>Join</div>
                 <div>Login</div>
                 <div className="relative">
-                    <p className="rounded-full border px-2.5 py-1">0</p>
-                    <p className="absolute -right-1 -top-1 h-4 w-4 place-content-center rounded-full bg-black text-center text-[10px] text-white">
+                    <p className="rounded-full border px-4 py-2">0</p>
+                    <p className="absolute -right-1 -top-1 place-content-center rounded-full bg-black px-2 py-1 text-center text-sm text-white">
                         0
                     </p>
                 </div>

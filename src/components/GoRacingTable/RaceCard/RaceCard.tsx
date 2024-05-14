@@ -27,7 +27,7 @@ const RaceCard = ({
         <div className="flex w-full flex-col lg:w-[20%]">
             <div
                 key={raceIndex}
-                className="flex h-full w-full flex-row items-center justify-between bg-white px-2 pb-2 text-sm font-bold shadow-sm"
+                className="flex h-full w-full flex-row items-center justify-between bg-white px-2 pb-2 text-2xl font-bold shadow-sm lg:text-sm"
             >
                 {/* Left-side of container */}
                 <div className="flex h-full flex-col">
@@ -35,12 +35,12 @@ const RaceCard = ({
                     <img
                         loading="lazy"
                         src={raceIcon}
-                        className="h-10 w-10"
+                        className="h-20 w-20 lg:h-10 lg:w-10"
                         alt="Race Type Icon"
                     />
                     {/* Race meeting/location and Race ID#*/}
                     <div className="flex flex-row gap-1 uppercase">
-                        <div className="max-w-32 truncate lg:max-w-28">
+                        <div className="max-w-42 truncate lg:max-w-28">
                             {raceMeeting}
                         </div>
                         <div>R{raceNumber}</div>

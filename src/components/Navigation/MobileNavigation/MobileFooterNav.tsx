@@ -28,7 +28,7 @@ export function MobileFooterNav() {
     ];
 
     return (
-        <div className="absolute bottom-0 grid h-14 w-full grid-cols-5 items-center justify-items-center gap-4 border-t border-black border-opacity-25 bg-white px-2 text-[10px] font-normal text-black shadow-md lg:hidden">
+        <div className="h-33 absolute bottom-0 grid w-full grid-cols-5 items-center justify-items-center gap-4 border-t border-black border-opacity-25 bg-white px-2 text-[10px] font-normal text-black shadow-md lg:hidden">
             {menuItems.map((item, index) => {
                 return (
                     <div
