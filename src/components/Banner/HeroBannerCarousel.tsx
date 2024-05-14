@@ -7,7 +7,7 @@ import homePage2 from '../../assets/images/homepage/HOM2.jpg';
 import homePage3 from '../../assets/images/homepage/HOM3.jpg';
 import homePage4 from '../../assets/images/homepage/HOM4.jpg';
 
-const HeroCarousel = () => {
+const HeroBannerCarousel = () => {
     const images = [homePage1, homePage2, homePage3, homePage4];
     return (
         <Carousel
@@ -33,4 +33,4 @@ const HeroCarousel = () => {
     );
 };
 
-export default HeroCarousel;
+export default HeroBannerCarousel;

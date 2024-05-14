@@ -1,7 +1,7 @@
 import { Search } from 'lucide-react';
 import nedsLogo from '../../../assets/images/homepage/neds-logo.svg';
 
-export function HeaderNavigation() {
+export function MobileHeaderNav() {
     return (
         <div className="from-nedsOrange flex h-10 w-full flex-row items-center justify-between bg-gradient-to-r to-[#fc5504] text-sm font-medium lg:hidden">
             <img

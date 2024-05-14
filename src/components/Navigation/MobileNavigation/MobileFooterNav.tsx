@@ -1,7 +1,7 @@
 import { Bell, Menu, Shirt, Timer } from 'lucide-react';
 import horseRacingIcon from '../../../assets/images/HorseRacing.svg';
 
-export function FooterNavigation() {
+export function MobileFooterNav() {
     const menuItems = [
         {
             icon: <Timer className="h-6 w-6" />,

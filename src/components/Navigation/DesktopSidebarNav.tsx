@@ -12,7 +12,7 @@ import {
     Trophy,
 } from 'lucide-react';
 
-export function SidebarMenu() {
+export function DesktopSidebarNav() {
     const [selectedIndex, setSelectedIndex] = useState<number | null>(0);
     // Sidebar menu items have no functionality in this example
     const menuItems = [
