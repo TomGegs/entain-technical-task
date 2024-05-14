@@ -60,7 +60,7 @@ const RaceColumn = () => {
                         loading="lazy"
                         src={detail.jerseyImage}
                         alt=""
-                        className="h-4 w-4"
+                        className="h-5 w-5"
                     />
                     {/* details*/}
                     <div>
