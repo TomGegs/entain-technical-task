@@ -1,9 +1,9 @@
 import { describe, it, expect, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
-import GoRacingTable from '../GoRacingTable';
-import useRaceData from '../../../hooks/useRaceData';
-import useRaceCategoryStore from '../../../state/useRaceCategoryStore';
-import useVisibleRaces from '../../../hooks/useVisibleRaces';
+import GoRacingTable from '../../components/GoRacingTable/GoRacingTable';
+import useRaceData from '../../hooks/useRaceData';
+import useRaceCategoryStore from '../../state/useRaceCategoryStore';
+import useVisibleRaces from '../../hooks/useVisibleRaces';
 
 vi.mock('../../../hooks/useRaceData', () => ({
     useRaceData: vi.fn(),
