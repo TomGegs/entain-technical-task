@@ -1,13 +1,15 @@
 import GoRacingTable from './components/GoRacingTable/GoRacingTable';
-import { HeroBanner } from './components/banner/heroBanner';
-import { SidebarMenu } from './components/sidebar/sidebarMenu';
+import { HeroBanner } from './components/banner/HeroBanner';
+import { HeaderNavigation } from './components/navigation/mobileNavigation/HeaderNavigation';
+import { SidebarMenu } from './components/navigation/sidebar/SidebarMenu';
 import { QueryProvider } from './state/queryClient';
 
 function App() {
     return (
-        <div className=" h-svh justify-evenly flex flex-row bg-[#f9f9f9] lg:h-lvh">
+        <div className=" flex h-svh flex-row justify-evenly bg-[#f9f9f9] lg:h-lvh">
             <SidebarMenu />
-            <div className='w-full lg:w-[80%]'>
+            <div className="w-full lg:w-[80%]">
+                <HeaderNavigation />
                 <HeroBanner />
                 <QueryProvider>
                     <GoRacingTable />
