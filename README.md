@@ -6,7 +6,7 @@ This Single Page Application (SPA) displays the "Next To Go Racing" table, mimic
 
 ## **Preview**
 
-### Desktop
+### Desktop View
 
 [![Product Name Screen Shot][application-screenshot]](https://entain-technical-task.vercel.app/)
 
