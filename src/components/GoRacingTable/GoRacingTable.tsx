@@ -12,7 +12,7 @@ const GoRacingTable = () => {
     const visibleRaces = useVisibleRaces(sortedRaces);
 
     return (
-        <div className="h-full w-full lg:w-full lg:max-w-[1300px] lg:py-4">
+        <div className="w-full lg:w-full lg:max-w-[1300px] lg:py-4">
             <TableHeader />
             <div className="flex w-full flex-col gap-1 pt-4 lg:flex-row">
                 {selectedRaceCategories.length > 0 ? (
