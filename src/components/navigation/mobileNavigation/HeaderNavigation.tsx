@@ -4,7 +4,12 @@ import nedsLogo from '../../../assets/images/homepage/neds-logo.svg';
 export function HeaderNavigation() {
     return (
         <div className="from-nedsOrange flex h-10 w-full flex-row items-center justify-between bg-gradient-to-r to-[#fc5504] text-sm font-medium lg:hidden">
-            <img src={nedsLogo} alt="Neds Logo" className="m-3 h-4" />
+            <img
+                loading="lazy"
+                src={nedsLogo}
+                alt="Neds Logo"
+                className="m-3 h-4"
+            />
             <div className="grid h-full  grid-cols-4 flex-row items-center justify-items-center gap-4 px-2 text-white">
                 <Search className="col-span-1 h-5 w-5" />
                 <div>Join</div>

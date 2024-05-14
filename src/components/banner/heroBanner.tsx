@@ -22,6 +22,7 @@ export function HeroBanner() {
                 {images.map((image, index) => (
                     <CarouselItem key={index}>
                         <img
+                            loading="lazy"
                             className="flex justify-center object-cover "
                             src={image}
                         />

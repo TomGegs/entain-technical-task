@@ -8,6 +8,7 @@ import { QueryProvider } from './state/queryClient';
 function App() {
     return (
         <div className=" flex h-svh flex-row justify-evenly bg-[#f9f9f9] lg:h-lvh">
+            {/* All navigation is for demo purposes only  */}
             <SidebarMenu />
             <div className="w-full lg:w-[80%]">
                 <HeaderNavigation />

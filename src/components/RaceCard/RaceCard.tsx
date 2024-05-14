@@ -33,6 +33,7 @@ const RaceCard = ({
                 <div className="flex h-full flex-col">
                     {/* Racing Category Icon */}
                     <img
+                        loading="lazy"
                         src={raceIcon}
                         className="h-10 w-10"
                         alt="Race Type Icon"
@@ -50,6 +51,7 @@ const RaceCard = ({
                     {/* Countdown or Loading Icon*/}
                     {isLoading ? (
                         <img
+                            loading="lazy"
                             src={loadingIcon}
                             alt="Loading..."
                             className="h-5 w-5 animate-spin"

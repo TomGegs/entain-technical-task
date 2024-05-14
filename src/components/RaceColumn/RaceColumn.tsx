@@ -56,7 +56,12 @@ const RaceColumn = () => {
                     className="flex h-14 flex-row items-center justify-between"
                 >
                     {/* jersey */}
-                    <img src={detail.jerseyImage} alt="" className="h-8 w-8" />
+                    <img
+                        loading="lazy"
+                        src={detail.jerseyImage}
+                        alt=""
+                        className="h-8 w-8"
+                    />
                     {/* details*/}
                     <div>
                         {/* Name of racer */}

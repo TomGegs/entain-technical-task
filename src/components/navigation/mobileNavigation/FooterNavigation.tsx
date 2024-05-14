@@ -8,7 +8,9 @@ export function FooterNavigation() {
             title: 'Next Up',
         },
         {
-            icon: <img src={horseRacingIcon} className="h-6 w-6" />,
+            icon: (
+                <img loading="lazy" src={horseRacingIcon} className="h-6 w-6" />
+            ),
             title: 'Racing',
         },
         {

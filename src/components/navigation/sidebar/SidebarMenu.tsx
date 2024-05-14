@@ -22,7 +22,9 @@ export function SidebarMenu() {
             first: true,
         },
         {
-            icon: <img src={HorseRacingIcon} className="h-4 w-4" />,
+            icon: (
+                <img loading="lazy" src={HorseRacingIcon} className="h-4 w-4" />
+            ),
             title: 'Racing',
         },
         {
@@ -57,7 +59,12 @@ export function SidebarMenu() {
     return (
         <div className="hidden h-full w-[20%] flex-col items-start pr-2 text-sm font-medium lg:flex ">
             <div className="bg-nedsOrange flex h-52 w-full items-center justify-center">
-                <img src={nedsLogo} alt="Neds Logo" className="h-10" />
+                <img
+                    loading="lazy"
+                    src={nedsLogo}
+                    alt="Neds Logo"
+                    className="h-10"
+                />
             </div>
 
             {menuItems.map((item, index) => (
