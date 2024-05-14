@@ -1,7 +1,7 @@
 import { describe, it, expect, vi, Mock } from 'vitest';
 import { renderHook } from '@testing-library/react';
 import { useQuery } from 'react-query';
-import useRaceData from '../useRaceData';
+import useRaceData from '../../hooks/useRaceData';
 
 vi.mock('../useRaceData', () => ({
     default: vi.fn(() => ({

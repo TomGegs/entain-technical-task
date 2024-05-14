@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from 'vitest';
 import create from 'zustand';
-import { RaceCategoryState } from '../useRaceCategoryStore';
+import { RaceCategoryState } from '../state/useRaceCategoryStore';
 
 // Mock the useRaceCategoryStore hook directly since it is being tested
 vi.mock('../useRaceCategoryStore', () => {

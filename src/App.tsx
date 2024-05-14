@@ -1,8 +1,8 @@
 import GoRacingTable from './components/GoRacingTable/GoRacingTable';
-import HeroCarousel from './components/banner/HeroCarousel';
-import { FooterNavigation } from './components/navigation/mobileNavigation/FooterNavigation';
-import { HeaderNavigation } from './components/navigation/mobileNavigation/HeaderNavigation';
-import { SidebarMenu } from './components/navigation/sidebar/SidebarMenu';
+import HeroCarousel from './components/Banner/HeroCarousel';
+import { FooterNavigation } from './components/Navigation/MobileNavigation/FooterNavigation';
+import { HeaderNavigation } from './components/Navigation/MobileNavigation/HeaderNavigation';
+import { SidebarMenu } from './components/Navigation/SidebarMenu';
 import { QueryProvider } from './state/queryClient';
 
 function App() {

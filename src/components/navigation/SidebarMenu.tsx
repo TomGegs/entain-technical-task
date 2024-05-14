@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import HorseRacingIcon from '../../../assets/images/HorseRacing.svg';
-import nedsLogo from '../../../assets/images/homepage/neds-logo.svg';
+import HorseRacingIcon from '../../assets/images/HorseRacing.svg';
+import nedsLogo from '../../assets/images/homepage/neds-logo.svg';
 import {
     CircleHelp,
     CreditCard,
@@ -58,7 +58,7 @@ export function SidebarMenu() {
     ];
     return (
         <div className="hidden h-full w-[20%] flex-col items-start pr-2 text-sm font-medium lg:flex ">
-            <div className="bg-nedsOrange flex h-52 w-full items-center justify-center">
+            <div className="flex h-52 w-full items-center justify-center bg-nedsOrange">
                 <img
                     loading="lazy"
                     src={nedsLogo}

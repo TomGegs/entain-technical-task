@@ -1,4 +1,4 @@
-import NoRacesAvailableIcon from '../../assets/images/NoRacesAvailableIcon.svg';
+import NoRacesAvailableIcon from '../../../assets/images/NoRacesAvailableIcon.svg';
 
 const NoRaceMessageCard = () => {
     return (

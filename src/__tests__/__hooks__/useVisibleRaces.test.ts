@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from 'vitest';
 import { renderHook } from '@testing-library/react';
-import useVisibleRaces from '../useVisibleRaces';
+import useVisibleRaces from '../../hooks/useVisibleRaces';
 import { raceSummaryData } from '../../models/raceSummarySchema';
 
 vi.mock('../useVisibleRaces', () => ({

@@ -1,5 +1,5 @@
-import CheckboxIcon from '../../assets/images/CheckboxIcon.svg';
-import useRaceCategoryStore from '../../state/useRaceCategoryStore';
+import CheckboxIcon from '../../../assets/images/CheckboxIcon.svg';
+import useRaceCategoryStore from '../../../state/useRaceCategoryStore';
 
 const RaceFilter = () => {
     const { raceCategories, selectedRaceCategories, toggleRaceCategory } =

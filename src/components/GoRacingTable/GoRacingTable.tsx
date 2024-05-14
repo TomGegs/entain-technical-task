@@ -1,9 +1,9 @@
-import RaceCard from '../RaceCard/RaceCard';
-import TableHeader from '../TableHeader/TableHeader';
+import RaceCard from './RaceCard/RaceCard';
+import TableHeader from './TableHeader/TableHeader';
 import useRaceData from '../../hooks/useRaceData';
 import useRaceCategoryStore from '../../state/useRaceCategoryStore';
 import useVisibleRaces from '../../hooks/useVisibleRaces';
-import NoRaceMessageCard from '../RaceCard/NoRaceMessageCard';
+import NoRaceMessageCard from './RaceCard/NoRaceMessageCard';
 
 const GoRacingTable = () => {
     const { sortedRaces } = useRaceData();
@@ -12,7 +12,7 @@ const GoRacingTable = () => {
     const visibleRaces = useVisibleRaces(sortedRaces);
 
     return (
-        <div className="w-full lg:py-4 lg:w-full">
+        <div className="w-full lg:w-full lg:py-4">
             <TableHeader />
             <div className="flex w-full flex-col gap-1 pt-4 lg:flex-row">
                 {selectedRaceCategories.length > 0 ? (

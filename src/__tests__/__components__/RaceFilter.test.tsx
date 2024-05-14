@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from 'vitest';
 import { render, screen, fireEvent } from '@testing-library/react';
-import RaceFilter from '../RaceFilter';
+import RaceFilter from '../../components/GoRacingTable/TableHeader/RaceFilter';
 
 // Setup the mock with an initially unselected third category
 vi.mock('../../../state/useRaceCategoryStore', () => {

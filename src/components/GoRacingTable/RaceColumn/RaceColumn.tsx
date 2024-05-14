@@ -1,4 +1,4 @@
-import JerseyImage from '../../assets/images/JerseyImage.svg';
+import JerseyImage from '../../../assets/images/JerseyImage.svg';
 
 //Mock information and design for the sake of the assessment
 
@@ -60,7 +60,7 @@ const RaceColumn = () => {
                         loading="lazy"
                         src={detail.jerseyImage}
                         alt=""
-                        className="h-8 w-8"
+                        className="h-4 w-4"
                     />
                     {/* details*/}
                     <div>

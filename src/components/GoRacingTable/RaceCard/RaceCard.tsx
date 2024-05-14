@@ -1,8 +1,8 @@
-import useRaceCountdown from '../../hooks/useRaceCountdown';
-import useRaceData from '../../hooks/useRaceData';
-import getRaceIcon from '../../utils/getRaceIcon';
+import useRaceCountdown from '../../../hooks/useRaceCountdown';
+import useRaceData from '../../../hooks/useRaceData';
+import getRaceIcon from '../../../utils/getRaceIcon';
 import RaceColumn from '../RaceColumn/RaceColumn';
-import loadingIcon from '../../assets/images/LoadingIcon.svg';
+import loadingIcon from '../../../assets/images/LoadingIcon.svg';
 
 type RaceCardProps = {
     raceCategory: string;
