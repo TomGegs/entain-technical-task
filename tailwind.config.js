@@ -17,6 +17,9 @@ module.exports = {
             },
         },
         extend: {
+            colors: {
+                nedsOrange: '#ff7800',
+            },
             keyframes: {
                 'accordion-down': {
                     from: { height: '0' },
