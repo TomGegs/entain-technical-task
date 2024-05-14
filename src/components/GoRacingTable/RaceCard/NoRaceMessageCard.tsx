@@ -9,10 +9,7 @@ const NoRaceMessageCard = () => {
                 className="h-10 w-10"
                 alt="Race Type Icon"
             />
-            <p>
-                No race category selected or no race currently information
-                available.
-            </p>
+            <p>No race category selected or no race information available.</p>
         </div>
     );
 };
