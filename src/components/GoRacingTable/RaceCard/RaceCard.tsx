@@ -24,10 +24,10 @@ const RaceCard = ({
     const { countdown, textColour } = useRaceCountdown(raceCountdown);
 
     return (
-        <div className="flex w-full flex-col lg:w-[20%]">
+        <div className="flex w-full flex-col px-2 lg:w-[20%] lg:px-0">
             <div
                 key={raceIndex}
-                className="flex h-full w-full flex-row items-center justify-between bg-white px-2 pb-2 text-2xl font-bold shadow-sm lg:text-sm"
+                className="flex h-full w-full flex-row items-center justify-between bg-white px-2 pb-2 text-3xl font-bold shadow-sm lg:text-sm"
             >
                 {/* Left-side of container */}
                 <div className="flex h-full flex-col">

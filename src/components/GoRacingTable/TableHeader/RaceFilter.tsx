@@ -20,13 +20,13 @@ const RaceFilter = () => {
                             onChange={() =>
                                 toggleRaceCategory(option.categoryId)
                             }
-                            className="checkbox-border peer h-3.5 w-3.5 cursor-pointer appearance-none rounded border-2 border-[#A7BCB1] checked:border-transparent"
+                            className="checkbox-border peer h-8 w-8 cursor-pointer appearance-none rounded border-2 border-[#A7BCB1] checked:border-transparent lg:h-3.5 lg:w-3.5"
                         />
                         {/* checkbox image */}
                         <img
                             loading="lazy"
                             src={CheckboxIcon}
-                            className="absolute bottom-0 left-0 h-3.5 w-3.5 cursor-pointer  rounded opacity-0 peer-checked:opacity-100"
+                            className="absolute bottom-0 left-0 h-8 w-8 cursor-pointer rounded opacity-0  peer-checked:opacity-100 lg:h-3.5 lg:w-3.5"
                         />
                         {/* race category icon */}
                         <img
@@ -39,7 +39,7 @@ const RaceFilter = () => {
                                     : option.iconNotSelected
                             }
                             alt={`${option.name} icon`}
-                            className="ml-1 h-5 w-5 cursor-pointer"
+                            className="ml-4 h-14 w-14 cursor-pointer lg:h-5 lg:w-5"
                         />
                     </div>
                 </label>
